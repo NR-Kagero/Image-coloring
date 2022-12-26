@@ -1,0 +1,10 @@
+from skimage import color
+from skimage import io
+import os
+list_images=os.listdir("F:\College\Seventh\GANS\Sec\CNN\data1")
+for i in list_images:
+    img = io.imread("F:\College\Seventh\GANS\Sec\CNN\data1\\"+i)
+    imgGray = color.rgb2gray(img)
+    io.imshow(imgGray)
+    io.show()
+# this code converts coloerd images to gray
